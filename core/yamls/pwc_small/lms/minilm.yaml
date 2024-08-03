@@ -25,12 +25,13 @@ train:
   auto_resume: False
   final_eval: False
   finetune: False
+  report_step: 10
 
 embedder:
   type: minilm
 
 data:
-  name: pwc_small
+  name: pubmed
   undirected: True
   include_negatives: True
   val_pct: 0.15

@@ -107,7 +107,7 @@ def load_taglp_cora(cfg: CN, lcc_bool: bool=True) -> Tuple[Dict[str, Data], List
     return splits, text, data
 
 
-def load_taglp_ogbn_arxiv(cfg: CN, if_lcc) -> Tuple[Dict[str, Data], List[str]]:
+def load_taglp_ogbn_arxiv(cfg: CN) -> Tuple[Dict[str, Data], List[str]]:
     # add one default argument
 
     data = load_graph_ogbn_arxiv(False)
@@ -132,7 +132,7 @@ def load_taglp_ogbn_arxiv(cfg: CN, if_lcc) -> Tuple[Dict[str, Data], List[str]]:
     print(f"num of texts in dataset: {len(text)}")
     return splits, text, data
 
-def load_taglp_pwc_large(cfg: CN, if_lcc) -> Tuple[Dict[str, Data], List[str]]:
+def load_taglp_pwc_large(cfg: CN) -> Tuple[Dict[str, Data], List[str]]:
     # add one default argument
 
     data = load_graph_pwc_large(cfg.method)
@@ -176,7 +176,7 @@ def get_edge_split(data: Data,
     return {'train': train_data, 'valid': val_data, 'test': test_data}
 
 
-def load_taglp_product(cfg: CN, if_lcc) -> Tuple[Dict[str, Data], List[str]]:
+def load_taglp_product(cfg: CN) -> Tuple[Dict[str, Data], List[str]]:
     # add one default argument
 
     data, text = load_tag_product()
@@ -208,7 +208,7 @@ def time_function(func):
     return wrapper
 
 @time_function
-def load_taglp_pubmed(cfg: CN, if_lcc) -> Tuple[Dict[str, Data], List[str]]:
+def load_taglp_pubmed(cfg: CN) -> Tuple[Dict[str, Data], List[str]]:
     # add one default argument
 
     data = load_graph_pubmed(False)
@@ -228,7 +228,7 @@ def load_taglp_pubmed(cfg: CN, if_lcc) -> Tuple[Dict[str, Data], List[str]]:
                             )
     return splits, text, data
 
-def load_taglp_citeseer(cfg: CN, if_lcc) -> Tuple[Dict[str, Data], List[str]]:
+def load_taglp_citeseer(cfg: CN) -> Tuple[Dict[str, Data], List[str]]:
     # add one default argument
 
     data = load_graph_citeseer()
@@ -284,7 +284,7 @@ def load_taglp_citationv8(cfg: CN, lcc_bool: bool=True) -> Tuple[Dict[str, Data]
 
 
  
-def load_taglp_pwc_large(cfg: CN, if_lcc) -> Tuple[Dict[str, Data], List[str]]:
+def load_taglp_pwc_large(cfg: CN) -> Tuple[Dict[str, Data], List[str]]:
     if hasattr(cfg, 'method'):
         pass
     else:
@@ -311,7 +311,7 @@ def load_taglp_pwc_large(cfg: CN, if_lcc) -> Tuple[Dict[str, Data], List[str]]:
     return splits, df, data
 
 
-def load_taglp_pwc_medium(cfg: CN, if_lcc) -> Tuple[Dict[str, Data], List[str]]:
+def load_taglp_pwc_medium(cfg: CN) -> Tuple[Dict[str, Data], List[str]]:
     if hasattr(cfg, 'method'):
         pass
     else:
@@ -342,7 +342,7 @@ def load_taglp_pwc_medium(cfg: CN, if_lcc) -> Tuple[Dict[str, Data], List[str]]:
     return splits, text, data
 
 
-def load_taglp_pwc_small(cfg: CN, if_lcc) -> Tuple[Dict[str, Data], List[str]]:
+def load_taglp_pwc_small(cfg: CN) -> Tuple[Dict[str, Data], List[str]]:
     if hasattr(cfg, 'method'):
         pass
     else:
